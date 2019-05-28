@@ -12,7 +12,9 @@
 		5632A4C9229DBC4300310A99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5632A4C8229DBC4300310A99 /* Assets.xcassets */; };
 		5632A4CC229DBC4300310A99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5632A4CA229DBC4300310A99 /* LaunchScreen.storyboard */; };
 		5632A4D8229DBD1400310A99 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5632A4D7229DBD1400310A99 /* CloudKit.framework */; };
-		5632A4DA229DBF2800310A99 /* CKUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632A4D9229DBF2800310A99 /* CKUserData.swift */; };
+		5632A4DA229DBF2800310A99 /* CKProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632A4D9229DBF2800310A99 /* CKProfileData.swift */; };
+		5632A4DD229DE41400310A99 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632A4DC229DE41400310A99 /* Profile.swift */; };
+		5632A4DF229DE57E00310A99 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632A4DE229DE57E00310A99 /* ProfileController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +26,9 @@
 		5632A4CD229DBC4300310A99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5632A4D5229DBD1100310A99 /* Memic.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Memic.entitlements; sourceTree = "<group>"; };
 		5632A4D7229DBD1400310A99 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		5632A4D9229DBF2800310A99 /* CKUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKUserData.swift; sourceTree = "<group>"; };
+		5632A4D9229DBF2800310A99 /* CKProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKProfileData.swift; sourceTree = "<group>"; };
+		5632A4DC229DE41400310A99 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		5632A4DE229DE57E00310A99 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +66,8 @@
 				5632A4D5229DBD1100310A99 /* Memic.entitlements */,
 				5632A4D3229DBCE000310A99 /* Resources */,
 				5632A4D4229DBCE600310A99 /* Storyboards */,
-				5632A4DB229DBF4100310A99 /* Model */,
+				5632A4DB229DBF4100310A99 /* Models */,
+				5632A4E0229DE58700310A99 /* Model Controllers */,
 			);
 			path = Memic;
 			sourceTree = "<group>";
@@ -94,12 +99,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5632A4DB229DBF4100310A99 /* Model */ = {
+		5632A4DB229DBF4100310A99 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5632A4D9229DBF2800310A99 /* CKUserData.swift */,
+				5632A4D9229DBF2800310A99 /* CKProfileData.swift */,
+				5632A4DC229DE41400310A99 /* Profile.swift */,
 			);
-			path = Model;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5632A4E0229DE58700310A99 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5632A4DE229DE57E00310A99 /* ProfileController.swift */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,8 +195,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5632A4DA229DBF2800310A99 /* CKUserData.swift in Sources */,
+				5632A4DA229DBF2800310A99 /* CKProfileData.swift in Sources */,
+				5632A4DD229DE41400310A99 /* Profile.swift in Sources */,
 				5632A4C2229DBC4200310A99 /* AppDelegate.swift in Sources */,
+				5632A4DF229DE57E00310A99 /* ProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
