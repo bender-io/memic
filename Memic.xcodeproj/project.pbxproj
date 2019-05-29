@@ -102,8 +102,8 @@
 		5632A4DB229DBF4100310A99 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5632A4D9229DBF2800310A99 /* CKProfileData.swift */,
 				5632A4DC229DE41400310A99 /* Profile.swift */,
+				5632A4D9229DBF2800310A99 /* CKProfileData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
