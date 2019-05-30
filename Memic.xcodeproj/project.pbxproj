@@ -15,6 +15,9 @@
 		5632A4DA229DBF2800310A99 /* CKProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632A4D9229DBF2800310A99 /* CKProfileData.swift */; };
 		5632A4DD229DE41400310A99 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632A4DC229DE41400310A99 /* Profile.swift */; };
 		5632A4DF229DE57E00310A99 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632A4DE229DE57E00310A99 /* ProfileController.swift */; };
+		5657F3E922A079CB00B7F984 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5657F3E822A079CB00B7F984 /* PostController.swift */; };
+		5657F3EB22A07C6900B7F984 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5657F3EA22A07C6900B7F984 /* Meme.swift */; };
+		5657F3ED22A07CF200B7F984 /* MemeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5657F3EC22A07CF200B7F984 /* MemeController.swift */; };
 		56C16064229F558500A83829 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C16063229F558500A83829 /* SignUpViewController.swift */; };
 		56C16066229F5F4100A83829 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C16065229F5F4100A83829 /* ProfileViewController.swift */; };
 		56C1606A22A0755400A83829 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1606922A0755400A83829 /* Post.swift */; };
@@ -33,6 +36,9 @@
 		5632A4D9229DBF2800310A99 /* CKProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKProfileData.swift; sourceTree = "<group>"; };
 		5632A4DC229DE41400310A99 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		5632A4DE229DE57E00310A99 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		5657F3E822A079CB00B7F984 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		5657F3EA22A07C6900B7F984 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
+		5657F3EC22A07CF200B7F984 /* MemeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeController.swift; sourceTree = "<group>"; };
 		56C16063229F558500A83829 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		56C16065229F5F4100A83829 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		56C1606922A0755400A83829 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -114,6 +120,7 @@
 			children = (
 				5632A4D9229DBF2800310A99 /* CKProfileData.swift */,
 				5632A4DC229DE41400310A99 /* Profile.swift */,
+				5657F3EA22A07C6900B7F984 /* Meme.swift */,
 				56C1606922A0755400A83829 /* Post.swift */,
 			);
 			path = Models;
@@ -123,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				5632A4DE229DE57E00310A99 /* ProfileController.swift */,
+				5657F3E822A079CB00B7F984 /* PostController.swift */,
+				5657F3EC22A07CF200B7F984 /* MemeController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -218,9 +227,12 @@
 			files = (
 				56C16066229F5F4100A83829 /* ProfileViewController.swift in Sources */,
 				5632A4DA229DBF2800310A99 /* CKProfileData.swift in Sources */,
+				5657F3E922A079CB00B7F984 /* PostController.swift in Sources */,
 				5632A4DD229DE41400310A99 /* Profile.swift in Sources */,
 				5632A4C2229DBC4200310A99 /* AppDelegate.swift in Sources */,
+				5657F3ED22A07CF200B7F984 /* MemeController.swift in Sources */,
 				5632A4DF229DE57E00310A99 /* ProfileController.swift in Sources */,
+				5657F3EB22A07C6900B7F984 /* Meme.swift in Sources */,
 				56C1606A22A0755400A83829 /* Post.swift in Sources */,
 				56C16064229F558500A83829 /* SignUpViewController.swift in Sources */,
 			);
