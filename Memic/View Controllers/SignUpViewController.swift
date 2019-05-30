@@ -11,7 +11,7 @@ import UIKit
 class SignUpViewController: UIViewController {
 
     // MARK: - Properties
-    var profilez : Profile?
+    var profile : Profile?
     
     // MARK: - IBOutlets
     @IBOutlet weak var firstNameTextField: UITextField!
@@ -44,7 +44,7 @@ class SignUpViewController: UIViewController {
                                   password: password,
                                   email: email)
             
-            profilez = profile
+            self.profile = profile
             print(profile.firstName, profile.lastName, profile.username, profile.password, profile.email ?? "@gmail.com")
             
         } else { print("🥵 a text field is missing text") }
@@ -52,10 +52,10 @@ class SignUpViewController: UIViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard profilez != nil else { return }
+        guard profile != nil else { return }
         if segue.identifier == "signUpMemicTBC" {
             let destinationVC = segue.destination as? ProfileViewController
-            let profile = profilez
+            let profile = self.profile
             destinationVC?.profile = profile
         }
     }
