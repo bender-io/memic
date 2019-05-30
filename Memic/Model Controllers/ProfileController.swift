@@ -1,5 +1,5 @@
 //
-//  CKUserData.swift
+//  ProfileController.swift
 //  Memic
 //
 //  Created by Brian Hersh on 5/28/19.
@@ -7,12 +7,12 @@
 //
 
 import Foundation
-import CloudKit
 
-class CKUserData {
+class ProfileController {
     
     // MARK: - Singleton
-    static let shared = CKUserData()
+    static let shared = ProfileController()
     
-    let privateDB : CKDatabase = CKContainer.default().privateCloudDatabase
+    
+    
 }
