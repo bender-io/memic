@@ -15,6 +15,8 @@
 		5632A4DA229DBF2800310A99 /* CKProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632A4D9229DBF2800310A99 /* CKProfileData.swift */; };
 		5632A4DD229DE41400310A99 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632A4DC229DE41400310A99 /* Profile.swift */; };
 		5632A4DF229DE57E00310A99 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632A4DE229DE57E00310A99 /* ProfileController.swift */; };
+		56C16064229F558500A83829 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C16063229F558500A83829 /* SignUpViewController.swift */; };
+		56C16066229F5F4100A83829 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C16065229F5F4100A83829 /* ProfileViewController.swift */; };
 		56CCEFBD229F02290015D201 /* MemicTBC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56CCEFBC229F02290015D201 /* MemicTBC.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,8 @@
 		5632A4D9229DBF2800310A99 /* CKProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKProfileData.swift; sourceTree = "<group>"; };
 		5632A4DC229DE41400310A99 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		5632A4DE229DE57E00310A99 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		56C16063229F558500A83829 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		56C16065229F5F4100A83829 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		56CCEFBC229F02290015D201 /* MemicTBC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MemicTBC.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +74,7 @@
 				5632A4D4229DBCE600310A99 /* Storyboards */,
 				5632A4DB229DBF4100310A99 /* Models */,
 				5632A4E0229DE58700310A99 /* Model Controllers */,
+				56CCEFC0229F552E0015D201 /* View Controllers */,
 			);
 			path = Memic;
 			sourceTree = "<group>";
@@ -117,6 +122,15 @@
 				5632A4DE229DE57E00310A99 /* ProfileController.swift */,
 			);
 			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		56CCEFC0229F552E0015D201 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				56C16063229F558500A83829 /* SignUpViewController.swift */,
+				56C16065229F5F4100A83829 /* ProfileViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,10 +213,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56C16066229F5F4100A83829 /* ProfileViewController.swift in Sources */,
 				5632A4DA229DBF2800310A99 /* CKProfileData.swift in Sources */,
 				5632A4DD229DE41400310A99 /* Profile.swift in Sources */,
 				5632A4C2229DBC4200310A99 /* AppDelegate.swift in Sources */,
 				5632A4DF229DE57E00310A99 /* ProfileController.swift in Sources */,
+				56C16064229F558500A83829 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

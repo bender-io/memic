@@ -15,14 +15,12 @@ class Profile {
     let username : String
     let password : String
     let email : String?
-    var image : UIImage?
     
-    init(firstName: String, lastName: String, username: String, password: String, email: String?, image: UIImage?) {
+    init(firstName: String, lastName: String, username: String, password: String, email: String?) {
         self.firstName = firstName
         self.lastName = lastName
         self.username = username
         self.password = password
         self.email = email
-        self.image = image
     }
 }

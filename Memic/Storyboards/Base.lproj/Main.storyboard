@@ -119,10 +119,10 @@
             </objects>
             <point key="canvasLocation" x="1920" y="528"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="ddg-YP-yOp">
             <objects>
-                <viewController id="W2S-MY-Nsy" sceneMemberID="viewController">
+                <viewController id="W2S-MY-Nsy" customClass="SignUpViewController" customModule="Memic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="46n-eO-LgS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,7 +205,8 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="DON-vR-clQ" kind="showDetail" identifier="signUpMemicTBC" id="PiC-rm-wDH"/>
+                                    <action selector="signUpButtonTapped:" destination="W2S-MY-Nsy" eventType="touchUpInside" id="azO-tn-7MB"/>
+                                    <segue destination="DON-vR-clQ" kind="show" identifier="signUpMemicTBC" id="PiC-rm-wDH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -220,6 +221,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0rt-V1-LST"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="ES6-uh-Q42" id="lK3-la-wlP"/>
+                        <outlet property="firstNameTextField" destination="pgl-vb-5If" id="tR9-Bi-8Em"/>
+                        <outlet property="lastNameTextField" destination="Sh1-fQ-SK8" id="cfp-UQ-Y1d"/>
+                        <outlet property="passwordTextField" destination="xw1-CY-eEf" id="pc5-p5-jSW"/>
+                        <outlet property="usernameTextField" destination="5MV-Xx-tJC" id="PJM-ch-JXo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mao-hl-bVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
