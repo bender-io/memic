@@ -9,9 +9,6 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-
-    // MARK: - Properties
-    var profile : Profile?
     
     // MARK: - IBOutlets
     @IBOutlet weak var firstNameTextField: UITextField!
@@ -20,18 +17,21 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     // MARK: - IBActions
-    @IBAction func signUpButtonTapped(_ sender: Any) {
-        signUp()
+    @IBAction func signUpButtonTapped(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func setFieldsButtonTapped(_ sender: Any) {
+        setTextFields()
     }
     
     // MARK: - CRUD Functions
-    func signUp() {
+    func setTextFields() {
         if let firstName = firstNameTextField.text, !firstName.isEmpty,
             let lastName = lastNameTextField.text, !lastName.isEmpty,
             let username = usernameTextField.text, !username.isEmpty,
@@ -44,7 +44,7 @@ class SignUpViewController: UIViewController {
                                   password: password,
                                   email: email)
             
-            self.profile = profile
+            ProfileController.shared.profile = profile
             print(profile.firstName, profile.lastName, profile.username, profile.password, profile.email ?? "@gmail.com")
             
         } else { print("🥵 a text field is missing text") }
@@ -52,10 +52,10 @@ class SignUpViewController: UIViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard profile != nil else { return }
+        guard let profile = ProfileController.shared.profile else { return }
         if segue.identifier == "signUpMemicTBC" {
-            let destinationVC = segue.destination as? ProfileViewController
-            let profile = self.profile
+            let tab = segue.destination as? UITabBarController
+            let destinationVC = tab?.viewControllers?[2] as? ProfileViewController
             destinationVC?.profile = profile
         }
     }

@@ -10,9 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Table View Controller-->
         <scene sceneID="a7S-Rd-c91">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vrY-9N-T8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="nwA-Tn-7iJ" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RC9-C5-LUN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -34,15 +35,15 @@
                             <outlet property="delegate" destination="nwA-Tn-7iJ" id="MDL-a8-kJm"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Home" image="home" selectedImage="home_tapped" id="AaT-Qr-hMC"/>
+                    <tabBarItem key="tabBarItem" title="" image="home" selectedImage="home_tapped" id="AaT-Qr-hMC"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vrY-9N-T8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2915.9420289855075" y="835.71428571428567"/>
         </scene>
-        <!--Add-->
+        <!--View Controller-->
         <scene sceneID="iJ0-9D-SXn">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AuN-GN-H38" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="2r0-4k-5eG" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N1v-2n-7Ah">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -50,21 +51,21 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <viewLayoutGuide key="safeArea" id="AYf-vj-gOn"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add" image="add" selectedImage="add" id="t0o-eO-ASa"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="" image="add" selectedImage="add" id="t0o-eO-ASa"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AuN-GN-H38" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3767" y="836"/>
         </scene>
-        <!--Profile-->
+        <!--Profile View Controller-->
         <scene sceneID="hum-RN-Iau">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vJr-5L-07k" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="RhW-EY-GHT" customClass="ProfileViewController" customModule="Memic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cv5-hx-EGd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_pic" translatesAutoresizingMaskIntoConstraints="NO" id="bd3-o0-tX0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_pic" highlightedImage="profile_pic" translatesAutoresizingMaskIntoConstraints="NO" id="bd3-o0-tX0">
                                 <rect key="frame" x="126" y="92" width="162" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bd3-o0-tX0" secondAttribute="height" multiplier="1:1" id="Jrb-Eo-t48"/>
@@ -114,20 +115,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mwS-tT-G8O"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="profile" id="JGY-ar-kpX"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="" image="profile" selectedImage="profile" id="JGY-ar-kpX"/>
                     <connections>
                         <outlet property="emailLabel" destination="FWi-Kz-b49" id="8WE-zc-bon"/>
                         <outlet property="fullNameLabel" destination="rpo-7Q-way" id="v84-aq-13H"/>
                         <outlet property="usernameLabel" destination="gQu-ND-lw3" id="Nu5-I1-nyP"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vJr-5L-07k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4621.739130434783" y="835.71428571428567"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="njP-Jw-2bV">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RfJ-oz-CWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="8fb-yS-DW5" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Oyz-hU-yR6"/>
@@ -144,7 +145,6 @@
                         <segue destination="RhW-EY-GHT" kind="relationship" relationship="viewControllers" id="HMa-Vx-VOv"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RfJ-oz-CWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3767" y="110"/>
         </scene>

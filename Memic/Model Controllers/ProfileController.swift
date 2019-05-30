@@ -10,9 +10,10 @@ import Foundation
 
 class ProfileController {
     
+    // MARK: - Properties
+    var profile : Profile?
+    
     // MARK: - Singleton
     static let shared = ProfileController()
-    
-    
     
 }

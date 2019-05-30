@@ -16,11 +16,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     
     // MARK: - Landing Pad
-    var profile : Profile? {
-        didSet {
-            updateViews()
-        }
-    }
+    var profile : Profile?
     
     override func viewDidLoad() {
         super.viewDidLoad()
