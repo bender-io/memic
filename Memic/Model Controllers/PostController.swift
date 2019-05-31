@@ -1,23 +1,25 @@
 //
-//  ProfileController.swift
+//  Post Controller.swift
 //  Memic
 //
-//  Created by Brian Hersh on 5/28/19.
+//  Created by Brian Hersh on 5/30/19.
 //  Copyright © 2019 Brian Daniel. All rights reserved.
 //
 
 import Foundation
 
-class ProfileController {
+class PostController {
     
     // MARK: - Source of Truth
-    var profile : Profile?
+    var posts : [Post]?
     
     // MARK: - Singleton
-    static let shared = ProfileController()
+    static let shared = PostController()
     
     private init() {
         
     }
+    
+    
     
 }
