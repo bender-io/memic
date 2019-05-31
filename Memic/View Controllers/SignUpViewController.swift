@@ -10,6 +10,9 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     
+    // MARK: - Source of Truth
+    var profile : Profile?
+    
     // MARK: - IBOutlets
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -19,19 +22,15 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        super.hideKeyboardWhenTappedAround()
     }
 
     // MARK: - IBActions
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
-        
-    }
-    
-    @IBAction func setFieldsButtonTapped(_ sender: Any) {
-        setTextFields()
     }
     
     // MARK: - CRUD Functions
-    func setTextFields() {
+    func signUpFlow() {
         if let firstName = firstNameTextField.text, !firstName.isEmpty,
             let lastName = lastNameTextField.text, !lastName.isEmpty,
             let username = usernameTextField.text, !username.isEmpty,
@@ -44,7 +43,7 @@ class SignUpViewController: UIViewController {
                                   password: password,
                                   email: email)
             
-            ProfileController.shared.profile = profile
+            self.profile = profile
             print(profile.firstName, profile.lastName, profile.username, profile.password, profile.email ?? "@gmail.com")
             
         } else { print("🥵 a text field is missing text") }
@@ -52,11 +51,24 @@ class SignUpViewController: UIViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let profile = ProfileController.shared.profile else { return }
+        signUpFlow()
+        guard let profile = profile else { return }
         if segue.identifier == "signUpMemicTBC" {
             let tab = segue.destination as? UITabBarController
             let destinationVC = tab?.viewControllers?[2] as? ProfileViewController
             destinationVC?.profile = profile
         }
+    }
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }

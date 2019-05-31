@@ -13,7 +13,11 @@ struct TopLevelJSON : Codable {
 }
 
 struct Result : Codable {
-    let media : [TinyGif]
+    let media : [GifDictionary]
+}
+
+struct GifDictionary : Codable {
+    let tinygif : TinyGif
 }
 
 struct TinyGif : Codable {

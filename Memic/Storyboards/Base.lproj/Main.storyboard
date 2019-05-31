@@ -114,10 +114,10 @@
         <!--MemicTBC-->
         <scene sceneID="hvK-e4-qBA">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="z88-Tq-gw2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="MemicTBC" id="DON-vR-clQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z88-Tq-gw2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2164" y="528"/>
+            <point key="canvasLocation" x="1893" y="528"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="ddg-YP-yOp">
@@ -209,13 +209,6 @@
                                     <segue destination="DON-vR-clQ" kind="showDetail" identifier="signUpMemicTBC" id="2C5-uY-3sr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phb-BL-E6v">
-                                <rect key="frame" x="0.0" y="526" width="414" height="30"/>
-                                <state key="normal" title="Set Fields"/>
-                                <connections>
-                                    <action selector="setFieldsButtonTapped:" destination="W2S-MY-Nsy" eventType="touchUpInside" id="Gdm-n0-B2L"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -225,9 +218,6 @@
                             <constraint firstItem="09M-f2-nYQ" firstAttribute="top" secondItem="0rt-V1-LST" secondAttribute="top" constant="48" id="SfX-PZ-Uj2"/>
                             <constraint firstItem="09M-f2-nYQ" firstAttribute="leading" secondItem="0rt-V1-LST" secondAttribute="leading" constant="16" id="mMQ-gX-JOZ"/>
                             <constraint firstItem="6iv-Yi-xzk" firstAttribute="top" secondItem="09M-f2-nYQ" secondAttribute="bottom" constant="48" id="qtw-aG-dBx"/>
-                            <constraint firstItem="Phb-BL-E6v" firstAttribute="top" secondItem="6iv-Yi-xzk" secondAttribute="bottom" constant="54" id="vR9-Pk-cCm"/>
-                            <constraint firstItem="0rt-V1-LST" firstAttribute="trailing" secondItem="Phb-BL-E6v" secondAttribute="trailing" id="x4q-lQ-9Kz"/>
-                            <constraint firstItem="Phb-BL-E6v" firstAttribute="leading" secondItem="0rt-V1-LST" secondAttribute="leading" id="y5h-cl-WSG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0rt-V1-LST"/>
                     </view>

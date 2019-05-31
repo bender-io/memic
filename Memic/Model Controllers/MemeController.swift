@@ -46,9 +46,11 @@ class MemeController {
                 let results = topLevelJSON.results
                 for result in results {
                     let media = result.media
-                    for tinygif in media {
+                    for m in media {
+                        let tinygif = m.tinygif
                         let url = tinygif.url
                         gifsArray.append(url)
+                    
                     }
                 }
                 completion(gifsArray)
