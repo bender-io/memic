@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct Meme : Codable {
-    let image : String
-    let like : Int
+struct Meme {
+    let gifs : [TinyGif]?
+    let likeCount : Int
     let rank : Rank
-    
+
     enum Rank : String, Codable {
         case gold
         case silver

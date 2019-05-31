@@ -16,12 +16,13 @@
 		5632A4DD229DE41400310A99 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632A4DC229DE41400310A99 /* Profile.swift */; };
 		5632A4DF229DE57E00310A99 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632A4DE229DE57E00310A99 /* ProfileController.swift */; };
 		5657F3E922A079CB00B7F984 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5657F3E822A079CB00B7F984 /* PostController.swift */; };
-		5657F3EB22A07C6900B7F984 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5657F3EA22A07C6900B7F984 /* Meme.swift */; };
+		5657F3EB22A07C6900B7F984 /* Gifs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5657F3EA22A07C6900B7F984 /* Gifs.swift */; };
 		5657F3ED22A07CF200B7F984 /* MemeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5657F3EC22A07CF200B7F984 /* MemeController.swift */; };
 		56C16064229F558500A83829 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C16063229F558500A83829 /* SignUpViewController.swift */; };
 		56C16066229F5F4100A83829 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C16065229F5F4100A83829 /* ProfileViewController.swift */; };
 		56C1606A22A0755400A83829 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1606922A0755400A83829 /* Post.swift */; };
 		56CCEFBD229F02290015D201 /* MemicTBC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56CCEFBC229F02290015D201 /* MemicTBC.storyboard */; };
+		56FA598922A0AE0C0064C930 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FA598822A0AE0C0064C930 /* Meme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,12 +38,13 @@
 		5632A4DC229DE41400310A99 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		5632A4DE229DE57E00310A99 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		5657F3E822A079CB00B7F984 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
-		5657F3EA22A07C6900B7F984 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
+		5657F3EA22A07C6900B7F984 /* Gifs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gifs.swift; sourceTree = "<group>"; };
 		5657F3EC22A07CF200B7F984 /* MemeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeController.swift; sourceTree = "<group>"; };
 		56C16063229F558500A83829 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		56C16065229F5F4100A83829 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		56C1606922A0755400A83829 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		56CCEFBC229F02290015D201 /* MemicTBC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MemicTBC.storyboard; sourceTree = "<group>"; };
+		56FA598822A0AE0C0064C930 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,8 +122,9 @@
 			children = (
 				5632A4D9229DBF2800310A99 /* CKProfileData.swift */,
 				5632A4DC229DE41400310A99 /* Profile.swift */,
-				5657F3EA22A07C6900B7F984 /* Meme.swift */,
+				5657F3EA22A07C6900B7F984 /* Gifs.swift */,
 				56C1606922A0755400A83829 /* Post.swift */,
+				56FA598822A0AE0C0064C930 /* Meme.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -232,7 +235,8 @@
 				5632A4C2229DBC4200310A99 /* AppDelegate.swift in Sources */,
 				5657F3ED22A07CF200B7F984 /* MemeController.swift in Sources */,
 				5632A4DF229DE57E00310A99 /* ProfileController.swift in Sources */,
-				5657F3EB22A07C6900B7F984 /* Meme.swift in Sources */,
+				56FA598922A0AE0C0064C930 /* Meme.swift in Sources */,
+				5657F3EB22A07C6900B7F984 /* Gifs.swift in Sources */,
 				56C1606A22A0755400A83829 /* Post.swift in Sources */,
 				56C16064229F558500A83829 /* SignUpViewController.swift in Sources */,
 			);

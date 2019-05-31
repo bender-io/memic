@@ -21,6 +21,9 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
+        MemeController.shared.fetchGifWithSearch(searchTerm: "excited") { (url) in
+            print(url)
+        }
     }
     
     func updateViews () {

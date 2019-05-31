@@ -13,12 +13,12 @@ class Post {
     let profileImage : UIImage
     let username : String
     let timestamp : Date
-    let memes : [Meme]?
+    let question : String
     
-    init(profileImage : UIImage = #imageLiteral(resourceName: "profile_pic"), username: String, timestamp: Date = Date(), memes: [Meme]?) {
+    init(profileImage : UIImage = #imageLiteral(resourceName: "profile_pic"), username: String, timestamp: Date = Date(), question: String) {
         self.profileImage = profileImage
         self.username = username
         self.timestamp = timestamp
-        self.memes = memes
+        self.question = question
     }
 }
