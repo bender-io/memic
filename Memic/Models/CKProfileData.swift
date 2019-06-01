@@ -61,9 +61,9 @@ class CKProfileData {
                 for record in records {
                     let username = record.object(forKey: "username") as! String
                     let password = record.object(forKey: "password") as! String
-                    let firstName = record.object(forKey: "firstName") as? String
-                    let lastName = record.object(forKey: "lastName") as? String
-                    let email = record.object(forKey: "email") as? String
+                    let _ = record.object(forKey: "firstName") as? String
+                    let _ = record.object(forKey: "lastName") as? String
+                    let _ = record.object(forKey: "email") as? String
                     self.addProfile(username: username, password: password)
                 }
             }

@@ -21,5 +21,5 @@ struct GifDictionary : Codable {
 }
 
 struct TinyGif : Codable {
-    let url : URL
+    let url : String
 }

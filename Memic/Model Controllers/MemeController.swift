@@ -11,7 +11,7 @@ import UIKit
 class MemeController {
     
     // MARK: - Source of Truth
-    var gifs : [TinyGif]?
+    var gifs : [String]?
 
     // MARK: - Singleton
     static let shared = MemeController()
@@ -21,7 +21,7 @@ class MemeController {
     let apiKey = "8ZNGHJOGN4RF"
     
     // MARK: - Fetch Data
-    func fetchGifWithSearch(searchTerm: String, completion:(@escaping([URL]) -> Void)) {
+    func fetchGifURL(searchTerm: String, completion: @escaping([String]) -> Void) {
         guard var url = baseURL else { completion([]) ; return }
         url.appendPathComponent("search")
         var components = URLComponents(url: url, resolvingAgainstBaseURL: true)
@@ -41,7 +41,7 @@ class MemeController {
             
             guard let data = data else { print("☎️ no data found") ; completion([]) ; return }
             do {
-                var gifsArray : [URL] = []
+                var gifsArray : [String] = []
                 let topLevelJSON = try JSONDecoder().decode(TopLevelJSON.self, from: data)
                 let results = topLevelJSON.results
                 for result in results {
@@ -58,7 +58,19 @@ class MemeController {
             } catch {
                 print("🙉 could not decode topLevelJSON.") ; completion([]) ; return
             }
-            
         }.resume()
+    }
+    
+    func fetchGifImage(gif: TinyGif, completion: @escaping(UIImage?) -> Void) {
+        guard let imageURL = URL(string: gif.url) else { return }
+        
+        URLSession.shared.dataTask(with: imageURL) { (data, _, error) in
+            if let error = error {
+                print("🐞 error found in dataTask... \(error.localizedDescription)") ; completion(nil) ; return
+            }
+            
+            guard let data = data else { completion(nil) ; return }
+            
+        }
     }
 }

@@ -13,7 +13,6 @@
         <!--Table View Controller-->
         <scene sceneID="a7S-Rd-c91">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vrY-9N-T8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="nwA-Tn-7iJ" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RC9-C5-LUN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -37,29 +36,67 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="" image="home" selectedImage="home_tapped" id="AaT-Qr-hMC"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vrY-9N-T8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2915.9420289855075" y="835.71428571428567"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="iJ0-9D-SXn">
+        <!--New Post Table View Controller-->
+        <scene sceneID="8U6-0N-0ji">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AuN-GN-H38" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="2r0-4k-5eG" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="N1v-2n-7Ah">
+                <tableViewController id="iJe-eC-Rp3" customClass="NewPostTableViewController" customModule="Memic" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Vh3-yV-BYZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <viewLayoutGuide key="safeArea" id="AYf-vj-gOn"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" tag="1" title="" image="add" selectedImage="add" id="t0o-eO-ASa"/>
-                </viewController>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search for a gif..." id="mNB-gi-aXu">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="iJe-eC-Rp3" id="FKo-Ha-SIa"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gifPickerCell" rowHeight="150" id="g9a-VZ-pas">
+                                <rect key="frame" x="0.0" y="72" width="414" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g9a-VZ-pas" id="4ml-0O-MtY">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="149.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ngt-vd-Bo7">
+                                            <rect key="frame" x="97" y="11" width="220" height="127.5"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ngt-vd-Bo7" secondAttribute="trailing" constant="77" id="El7-XO-Wog"/>
+                                        <constraint firstItem="ngt-vd-Bo7" firstAttribute="leading" secondItem="4ml-0O-MtY" secondAttribute="leadingMargin" constant="77" id="KNe-xJ-FQx"/>
+                                        <constraint firstItem="ngt-vd-Bo7" firstAttribute="centerX" secondItem="4ml-0O-MtY" secondAttribute="centerX" id="Qgl-zw-bf6"/>
+                                        <constraint firstItem="ngt-vd-Bo7" firstAttribute="top" secondItem="4ml-0O-MtY" secondAttribute="topMargin" id="a9R-3S-pIp"/>
+                                        <constraint firstItem="ngt-vd-Bo7" firstAttribute="centerY" secondItem="4ml-0O-MtY" secondAttribute="centerY" id="h5Q-Wu-onS"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="iJe-eC-Rp3" id="DeF-lf-YXo"/>
+                            <outlet property="delegate" destination="iJe-eC-Rp3" id="KvB-3b-txM"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="" image="add" selectedImage="add" id="o9u-s4-fx5"/>
+                    <connections>
+                        <outlet property="postSearchBar" destination="mNB-gi-aXu" id="87x-SE-cfi"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d7Z-80-Jgs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3767" y="836"/>
+            <point key="canvasLocation" x="3766.666666666667" y="835.71428571428567"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="hum-RN-Iau">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vJr-5L-07k" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="RhW-EY-GHT" customClass="ProfileViewController" customModule="Memic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cv5-hx-EGd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -122,13 +159,13 @@
                         <outlet property="usernameLabel" destination="gQu-ND-lw3" id="Nu5-I1-nyP"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vJr-5L-07k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4621.739130434783" y="835.71428571428567"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="njP-Jw-2bV">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RfJ-oz-CWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="8fb-yS-DW5" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Oyz-hU-yR6"/>
@@ -141,10 +178,11 @@
                     </tabBar>
                     <connections>
                         <segue destination="nwA-Tn-7iJ" kind="relationship" relationship="viewControllers" id="n2y-LG-ocZ"/>
-                        <segue destination="2r0-4k-5eG" kind="relationship" relationship="viewControllers" id="AHt-tu-eKy"/>
+                        <segue destination="iJe-eC-Rp3" kind="relationship" relationship="viewControllers" id="KFV-Fg-p95"/>
                         <segue destination="RhW-EY-GHT" kind="relationship" relationship="viewControllers" id="HMa-Vx-VOv"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RfJ-oz-CWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3767" y="110"/>
         </scene>

@@ -13,7 +13,7 @@ struct Meme {
     let likeCount : Int
     let rank : Rank
 
-    enum Rank : String, Codable {
+    enum Rank : String {
         case gold
         case silver
         case bronze
