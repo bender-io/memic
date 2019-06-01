@@ -22,6 +22,7 @@
 		56CCEFBD229F02290015D201 /* MemicTBC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56CCEFBC229F02290015D201 /* MemicTBC.storyboard */; };
 		56FA598922A0AE0C0064C930 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FA598822A0AE0C0064C930 /* Meme.swift */; };
 		56FA598F22A22B320064C930 /* NewPostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FA598E22A22B320064C930 /* NewPostTableViewController.swift */; };
+		56FA599122A2390E0064C930 /* SwiftGif.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56FA599022A2390E0064C930 /* SwiftGif.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		56CCEFBC229F02290015D201 /* MemicTBC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MemicTBC.storyboard; sourceTree = "<group>"; };
 		56FA598822A0AE0C0064C930 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 		56FA598E22A22B320064C930 /* NewPostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostTableViewController.swift; sourceTree = "<group>"; };
+		56FA599022A2390E0064C930 /* SwiftGif.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftGif.framework; path = Carthage/Build/iOS/SwiftGif.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5632A4D8229DBD1400310A99 /* CloudKit.framework in Frameworks */,
+				56FA599122A2390E0064C930 /* SwiftGif.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +113,7 @@
 		5632A4D6229DBD1400310A99 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				56FA599022A2390E0064C930 /* SwiftGif.framework */,
 				5632A4D7229DBD1400310A99 /* CloudKit.framework */,
 			);
 			name = Frameworks;
@@ -155,6 +159,7 @@
 				5632A4BA229DBC4200310A99 /* Sources */,
 				5632A4BB229DBC4200310A99 /* Frameworks */,
 				5632A4BC229DBC4200310A99 /* Resources */,
+				56FA599222A2391E0064C930 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -219,6 +224,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		56FA599222A2391E0064C930 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftGif.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5632A4BA229DBC4200310A99 /* Sources */ = {
@@ -383,6 +409,10 @@
 				CODE_SIGN_ENTITLEMENTS = Memic/Memic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2F9Q94NNH5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Memic/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -402,6 +432,10 @@
 				CODE_SIGN_ENTITLEMENTS = Memic/Memic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2F9Q94NNH5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Memic/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

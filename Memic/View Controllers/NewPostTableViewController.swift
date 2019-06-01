@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftGif
 
 class NewPostTableViewController: UITableViewController {
 
@@ -23,7 +24,7 @@ class NewPostTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "gifPickerCell", for: indexPath)
         let gif = MemeController.shared.gifs?[indexPath.row]
-        MemeController.shared.fetchGifURL(searchTerm: <#T##String#>, completion: <#T##(([String]) -> Void)##(([String]) -> Void)##([String]) -> Void#>)
+//        MemeController.shared.fetchGifURL(searchTerm: <#T##String#>, completion: <#T##(([String]) -> Void)##(([String]) -> Void)##([String]) -> Void#>)
 
         return cell
     }
