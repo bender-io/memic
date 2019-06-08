@@ -8,13 +8,13 @@
 
 import UIKit
 
-class MemeController {
+class GifController {
     
     // MARK: - Source of Truth
     var gifs : [String]?
 
     // MARK: - Singleton
-    static let shared = MemeController()
+    static let shared = GifController()
     
     // MARK: - Properties
     let baseURL = URL(string: "https://api.tenor.com/v1")
@@ -23,6 +23,7 @@ class MemeController {
     // MARK: - Fetch Data
     func fetchGifURL(searchTerm: String, completion: @escaping([String]) -> Void) {
         guard var url = baseURL else { completion([]) ; return }
+        
         url.appendPathComponent("search")
         var components = URLComponents(url: url, resolvingAgainstBaseURL: true)
         let searchQuery = URLQueryItem(name: "q", value: searchTerm)
@@ -35,28 +36,27 @@ class MemeController {
         
         URLSession.shared.dataTask(with: finalURL) { (data, _, error) in
             if let error = error {
-                print("🤬 error found when running dataTask \(error.localizedDescription)")
+                print(" 🐌 Snail it found in \(#function) : \(error.localizedDescription) : \(error)")
                 completion([]) ; return
             }
             
-            guard let data = data else { print("☎️ no data found") ; completion([]) ; return }
+            guard let data = data else { print("☎️ No data found") ; completion([]) ; return }
             do {
-                var gifsArray : [String] = []
+                var tinygifs : [String] = []
                 let topLevelJSON = try JSONDecoder().decode(TopLevelJSON.self, from: data)
                 let results = topLevelJSON.results
                 for result in results {
                     let media = result.media
-                    for m in media {
-                        let tinygif = m.tinygif
+                    for gif in media {
+                        let tinygif = gif.tinygif
                         let url = tinygif.url
-                        gifsArray.append(url)
-                    
+                        tinygifs.append(url)
                     }
                 }
-                completion(gifsArray)
+                completion(tinygifs)
                 
             } catch {
-                print("🙉 could not decode topLevelJSON.") ; completion([]) ; return
+                print("🙉 Could not decode topLevelJSON.") ; completion([]) ; return
             }
         }.resume()
     }
@@ -66,11 +66,13 @@ class MemeController {
         
         URLSession.shared.dataTask(with: imageURL) { (data, _, error) in
             if let error = error {
-                print("🐞 error found in dataTask... \(error.localizedDescription)") ; completion(nil) ; return
+                print(" 🐌 Snail it found in \(#function) : \(error.localizedDescription) : \(error)")
+                completion(nil) ; return
             }
             
+            // TODO: - Finish Gif Fetch
             guard let data = data else { completion(nil) ; return }
-            
+                print(data)
         }
     }
 }

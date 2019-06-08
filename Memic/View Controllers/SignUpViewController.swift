@@ -46,7 +46,7 @@ class SignUpViewController: UIViewController {
             self.profile = profile
             print(profile.firstName, profile.lastName, profile.username, profile.password, profile.email ?? "@gmail.com")
             
-        } else { print("🥵 a text field is missing text") }
+        } else { presentSimpleAlertController(title: "One or more text feilds are missing.", message: "Make sure all the required fields have been filled in.") }
     }
     
     // MARK: - Navigation
@@ -61,8 +61,22 @@ class SignUpViewController: UIViewController {
     }
 }
 
+extension SignUpViewController {
+
+    func presentSimpleAlertController(title: String, message: String) {
+
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let dismissAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+        alertController.addAction(dismissAction)
+        
+        self.present(alertController, animated: true)
+    }
+}
+
 extension UIViewController {
+    
     func hideKeyboardWhenTappedAround() {
+
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)

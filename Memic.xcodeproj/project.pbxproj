@@ -14,8 +14,9 @@
 		5632A4D8229DBD1400310A99 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5632A4D7229DBD1400310A99 /* CloudKit.framework */; };
 		5632A4DA229DBF2800310A99 /* CKProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632A4D9229DBF2800310A99 /* CKProfileData.swift */; };
 		5632A4DD229DE41400310A99 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632A4DC229DE41400310A99 /* Profile.swift */; };
+		564F3A2F22AC29BD00703003 /* ProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564F3A2E22AC29BD00703003 /* ProfilePictureViewController.swift */; };
 		5657F3EB22A07C6900B7F984 /* Gifs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5657F3EA22A07C6900B7F984 /* Gifs.swift */; };
-		5657F3ED22A07CF200B7F984 /* MemeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5657F3EC22A07CF200B7F984 /* MemeController.swift */; };
+		5657F3ED22A07CF200B7F984 /* GifController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5657F3EC22A07CF200B7F984 /* GifController.swift */; };
 		56C16064229F558500A83829 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C16063229F558500A83829 /* SignUpViewController.swift */; };
 		56C16066229F5F4100A83829 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C16065229F5F4100A83829 /* ProfileViewController.swift */; };
 		56C1606A22A0755400A83829 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1606922A0755400A83829 /* Post.swift */; };
@@ -36,8 +37,9 @@
 		5632A4D7229DBD1400310A99 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		5632A4D9229DBF2800310A99 /* CKProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKProfileData.swift; sourceTree = "<group>"; };
 		5632A4DC229DE41400310A99 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		564F3A2E22AC29BD00703003 /* ProfilePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePictureViewController.swift; sourceTree = "<group>"; };
 		5657F3EA22A07C6900B7F984 /* Gifs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gifs.swift; sourceTree = "<group>"; };
-		5657F3EC22A07CF200B7F984 /* MemeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeController.swift; sourceTree = "<group>"; };
+		5657F3EC22A07CF200B7F984 /* GifController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifController.swift; sourceTree = "<group>"; };
 		56C16063229F558500A83829 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		56C16065229F5F4100A83829 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		56C1606922A0755400A83829 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -134,17 +136,26 @@
 		5632A4E0229DE58700310A99 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5657F3EC22A07CF200B7F984 /* MemeController.swift */,
+				5657F3EC22A07CF200B7F984 /* GifController.swift */,
 			);
 			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		564F3A3022AC29C800703003 /* ProfileVC's */ = {
+			isa = PBXGroup;
+			children = (
+				56C16065229F5F4100A83829 /* ProfileViewController.swift */,
+				564F3A2E22AC29BD00703003 /* ProfilePictureViewController.swift */,
+			);
+			path = "ProfileVC's";
 			sourceTree = "<group>";
 		};
 		56CCEFC0229F552E0015D201 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				56C16063229F558500A83829 /* SignUpViewController.swift */,
-				56C16065229F5F4100A83829 /* ProfileViewController.swift */,
 				56FA598E22A22B320064C930 /* NewPostTableViewController.swift */,
+				564F3A3022AC29C800703003 /* ProfileVC's */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -253,9 +264,10 @@
 			files = (
 				56C16066229F5F4100A83829 /* ProfileViewController.swift in Sources */,
 				5632A4DA229DBF2800310A99 /* CKProfileData.swift in Sources */,
+				564F3A2F22AC29BD00703003 /* ProfilePictureViewController.swift in Sources */,
 				5632A4DD229DE41400310A99 /* Profile.swift in Sources */,
 				5632A4C2229DBC4200310A99 /* AppDelegate.swift in Sources */,
-				5657F3ED22A07CF200B7F984 /* MemeController.swift in Sources */,
+				5657F3ED22A07CF200B7F984 /* GifController.swift in Sources */,
 				56FA598922A0AE0C0064C930 /* Meme.swift in Sources */,
 				5657F3EB22A07C6900B7F984 /* Gifs.swift in Sources */,
 				56C1606A22A0755400A83829 /* Post.swift in Sources */,

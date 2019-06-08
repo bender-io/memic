@@ -9,16 +9,16 @@
 import UIKit
 
 class Post {
-    
-    let profileImage : UIImage
+
     let username : String
     let timestamp : Date
     let question : String
+    let profileImage : UIImage
     
-    init(profileImage : UIImage = #imageLiteral(resourceName: "profile_pic"), username: String, timestamp: Date = Date(), question: String) {
-        self.profileImage = profileImage
+    init(username: String, timestamp: Date = Date(), question: String, profileImage : UIImage = #imageLiteral(resourceName: "profile_pic")) {
         self.username = username
         self.timestamp = timestamp
         self.question = question
+        self.profileImage = profileImage
     }
 }

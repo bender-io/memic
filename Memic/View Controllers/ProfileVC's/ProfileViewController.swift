@@ -10,6 +10,9 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    // MARK: Properties
+    var profilePicture : UIImage = #imageLiteral(resourceName: "profile_pic.jpg")
+    
     // MARK: - IBOutlets
     @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
@@ -21,9 +24,6 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
-        MemeController.shared.fetchGifURL(searchTerm: "excited") { (url) in
-            print(url)
-        }
     }
     
     func updateViews () {
@@ -31,5 +31,22 @@ class ProfileViewController: UIViewController {
         fullNameLabel.text = profile.firstName + " " + profile.lastName
         usernameLabel.text = profile.username
         emailLabel.text = profile.email
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toProfilePictureVC" {
+            let destinationVC = segue.destination as? ProfilePictureViewController
+            destinationVC?.delegate = self
+        }
+    }
+}
+
+extension ProfileViewController : ProfilePictureViewControllerDelegate {
+    
+    func profilePictureSelected(image: UIImage?) {
+        guard let image = image else { return }
+        
+        profilePicture = image
+        
     }
 }

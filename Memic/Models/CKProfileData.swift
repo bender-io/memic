@@ -13,6 +13,7 @@ class CKProfileData {
     
     // MARK: - Singleton
     static let shared = CKProfileData()
+    private init() {}
     
     // MARK: - Databases
     let privateDB : CKDatabase = CKContainer.default().privateCloudDatabase
@@ -20,10 +21,6 @@ class CKProfileData {
     
     // MARK: - Source of Truth
     var profiles : [Profile] = []
-    
-    private init() {
-        
-    }
     
     // MARK: - CRUD Functions
     func saveProfile() {
